@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace MMFinanceManager.WebApi.Controllers
 {
+    [Authorize]
     public class TransactionController : ApiController
     {
         // GET api/values

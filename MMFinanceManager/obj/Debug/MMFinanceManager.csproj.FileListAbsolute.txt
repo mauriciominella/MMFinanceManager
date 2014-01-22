@@ -15,3 +15,5 @@ D:\GIT\MMFinanceManager\MMFinanceManager\bin\Debug\System.Data.SqlServerCe.dll
 D:\GIT\MMFinanceManager\MMFinanceManager\bin\Debug\EntityFramework.xml
 D:\GIT\MMFinanceManager\MMFinanceManager\bin\Debug\EntityFramework.SqlServer.xml
 D:\GIT\MMFinanceManager\MMFinanceManager\bin\Debug\EntityFramework.SqlServerCompact.xml
+D:\GIT\MMFinanceManager\MMFinanceManager\obj\Debug\MMFinanceManager.Migrations.InitialCreate.resources
+D:\GIT\MMFinanceManager\MMFinanceManager\obj\Debug\MMFinanceManager.csproj.GenerateResource.Cache

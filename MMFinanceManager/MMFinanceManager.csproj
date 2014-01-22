@@ -55,6 +55,11 @@
   <ItemGroup>
     <Compile Include="EntityFramework\EFDbContext.cs" />
     <Compile Include="EntityFramework\EntitiesContextInitializer.cs" />
+    <Compile Include="Migrations\201401210133196_InitialCreate.cs" />
+    <Compile Include="Migrations\201401210133196_InitialCreate.Designer.cs">
+      <DependentUpon>201401210133196_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\Transaction.cs" />
@@ -66,7 +71,11 @@
     <Compile Include="Services\TransactionRepository.cs" />
     <Compile Include="Services\TransactionService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201401210133196_InitialCreate.resx">
+      <DependentUpon>201401210133196_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

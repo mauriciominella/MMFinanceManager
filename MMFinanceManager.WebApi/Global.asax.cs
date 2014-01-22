@@ -25,7 +25,7 @@ namespace MMFinanceManager.WebApi
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Database.SetInitializer(new EntitiesContextInitializer());
+            //Database.SetInitializer(new EntitiesContextInitializer());
         }
     }
 }
