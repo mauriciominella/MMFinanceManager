@@ -18,6 +18,13 @@ namespace MMFinanceManager.WebApi.Controllers
             return categoryService.GetAll();
         }
 
+        //[ActionName("Expense")]
+        //public IEnumerable<Category> GetExpenseType()
+        //{
+        //    CategoryService categoryService = new CategoryService();
+        //    return categoryService.GetAllOfExpenseType();
+        //}
+
         // GET api/values/5
         public Category Get(long id)
         {

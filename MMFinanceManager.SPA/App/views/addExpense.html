@@ -1,0 +1,55 @@
+﻿<form class="form-horizontal" data-bind="submit: add">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Add Expense</legend>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="category">Category</label>
+  <div class="controls">
+    <select id="category" name="category" class="input-xlarge" data-bind="options: categories,
+    optionsText: function (item) {
+        return item.Name
+    },
+    value: selectedCategory,
+    optionsCaption: 'Choose...'">
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="description">Description</label>
+  <div class="controls">
+    <input id="description" name="description" type="text" placeholder="Expense description" class="input-xlarge"
+     data-bind="value: description">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="Amount">Amount</label>
+  <div class="controls">
+    <input id="Amount" name="Amount" type="text" placeholder="placeholder" class="input-xlarge" data-bind="value: amount">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="TransactionDate">Date</label>
+  <div class="controls">
+    <input id="transactionDate" name="TransactionDate" type="text" placeholder="placeholder" class="input-xlarge" data-bind="value: transactionDate">
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="control-group">
+  <div class="controls">
+    <button id="addExpenseButton" name="addExpenseButton" class="btn btn-primary">Add</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

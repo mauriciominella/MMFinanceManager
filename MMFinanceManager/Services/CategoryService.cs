@@ -38,6 +38,12 @@ namespace MMFinanceManager.Services
             return _categoryDbService.GetAll();
         }
 
+        public IEnumerable<Category> GetAllOfExpenseType()
+        {
+            return _categoryDbService.GetAll().Where(c => c.Type == TransactionType.Expense);
+        }
+
+
         #endregion
  
     }

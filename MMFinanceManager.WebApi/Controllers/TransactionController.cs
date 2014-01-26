@@ -9,7 +9,6 @@ using System.Web.Http;
 
 namespace MMFinanceManager.WebApi.Controllers
 {
-    [Authorize]
     public class TransactionController : ApiController
     {
         // GET api/values
@@ -28,6 +27,8 @@ namespace MMFinanceManager.WebApi.Controllers
         // POST api/values
         public void Post(Transaction transactionToCreate)
         {
+            transactionToCreate.CreationDate = DateTime.Now;    
+
             TransactionService transactionService = new TransactionService();
             transactionService.AddNew(transactionToCreate);
         }

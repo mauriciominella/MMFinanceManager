@@ -17,15 +17,6 @@ namespace MMFinanceManager.Model
         public long CategoryId { get; set; }
 
         public virtual Category Category { get; set; }
-
-        [NotMapped]
-        public string CategoryName
-        {
-            get
-            {
-                return Category.Name;
-            }
-        }
        
         public string Description { get; set; }
 
