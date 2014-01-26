@@ -1,5 +1,4 @@
 D:\GIT\MMFinanceManager\MMFinanceManager.Tests\bin\Debug\MMFinanceManager.Tests.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.Tests\bin\Debug\MMFinanceManager.Tests.pdb
-D:\GIT\MMFinanceManager\MMFinanceManager.Tests\obj\Debug\MMFinanceManager.Tests.csprojResolveAssemblyReference.cache
 D:\GIT\MMFinanceManager\MMFinanceManager.Tests\obj\Debug\MMFinanceManager.Tests.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.Tests\obj\Debug\MMFinanceManager.Tests.pdb

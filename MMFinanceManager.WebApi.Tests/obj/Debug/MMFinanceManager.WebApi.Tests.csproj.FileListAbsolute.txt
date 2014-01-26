@@ -38,7 +38,6 @@ D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\MMFinanceManager
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\MMFinanceManager.WebApi.Tests.pdb
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\MMFinanceManager.WebApi.dll
-D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\Newtonsoft.Json.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\System.Net.Http.Formatting.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\System.Web.Helpers.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi.Tests\bin\Debug\System.Web.Http.dll

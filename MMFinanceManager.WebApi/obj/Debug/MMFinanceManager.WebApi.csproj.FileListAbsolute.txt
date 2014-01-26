@@ -38,7 +38,6 @@ D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\MMFinanceManager.WebApi.pdb
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\Antlr3.Runtime.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\EntityFramework.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\Microsoft.Web.Infrastructure.dll
-D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\Newtonsoft.Json.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Net.Http.Formatting.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.Helpers.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.Http.dll
@@ -52,7 +51,6 @@ D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.WebPages.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.WebPages.Razor.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\WebGrease.dll
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\EntityFramework.xml
-D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\Newtonsoft.Json.xml
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Net.Http.Formatting.xml
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.Helpers.xml
 D:\GIT\MMFinanceManager\MMFinanceManager.WebApi\bin\System.Web.Http.xml
