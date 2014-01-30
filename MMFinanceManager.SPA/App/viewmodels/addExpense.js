@@ -4,7 +4,8 @@
     //If you wish to be able to create multiple instances, instead export a function.
     //See the "welcome" module for an example of function export.
 
-
+    var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+    //http://localhost:26741
     
 
     return {
@@ -20,7 +21,7 @@
 
             jQuery.support.cors = true;
             $.ajax({
-                url: "http://localhost:26741/api/ExpenseCategory",
+                url: apiBaseURL + "ExpenseCategory",
                 type: "GET",
                 success: function (result) {
                     for (var i = 0; i < result.length; i++) {
@@ -51,7 +52,7 @@
 
             jQuery.support.cors = true;
             $.ajax({
-                url: "http://localhost:26741/api/Transaction",
+                url: apiBaseURL + "Transaction",
                 data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: transactionDateToSave.toISOString(), Type: 2 },
                 type: "POST",
                 success: function (result) {

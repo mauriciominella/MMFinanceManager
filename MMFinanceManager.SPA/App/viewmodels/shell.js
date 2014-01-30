@@ -8,7 +8,8 @@
         },
         activate: function () {
             router.map([
-                { route: 'addExpense', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' }
+                { route: '', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' }
+                //{ route: 'addExpense', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' }
             ]).buildNavigationModel();
             
             return router.activate();
