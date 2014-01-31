@@ -133,7 +133,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\ExpenseCategoryController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

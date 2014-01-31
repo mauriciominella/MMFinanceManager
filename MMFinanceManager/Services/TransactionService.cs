@@ -38,6 +38,11 @@ namespace MMFinanceManager.Services
             return _transactionDbService.GetAll();
         }
 
+        public IEnumerable<Transaction> GetCurrentMonth()
+        {
+            return _transactionDbService.GetAll().Where(t => t.Date.Month == DateTime.Now.Month && t.Date.Year == DateTime.Now.Year).OrderByDescending(o => o.Date);
+        }
+
         #endregion
  
     }

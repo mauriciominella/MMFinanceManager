@@ -135,8 +135,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App\main.js" />
     <Content Include="App\viewmodels\addExpense.js" />
+    <Content Include="App\viewmodels\currentMonthTransactions.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\views\addExpense.html" />
+    <Content Include="App\views\currentMonthTransactions.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />

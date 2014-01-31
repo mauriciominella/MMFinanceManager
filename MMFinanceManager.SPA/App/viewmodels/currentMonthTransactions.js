@@ -6,16 +6,12 @@
 
     //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
     var apiBaseURL = 'http://localhost:26741/api/';
-        
+    
 
     return {
-        displayName: 'Add Expense',
-        categories: ko.observableArray([]),
-        selectedCategory: ko.observable(),
-        description: ko.observable(),
-        amount: ko.observable(),
-        transactionDate: ko.observable(),
-        activate: function () {
+        displayName: 'Current Month Transactions',
+        transactions: ko.observableArray([]),
+        activate: function () {          
 
         },
         select: function(item) {
@@ -24,44 +20,20 @@
             //item.viewUrl = 'views/detail';
             //app.showDialog(item);
         },
-        add: function () {
-
-            var year = this.transactionDate().split('/')[2];
-            var month = this.transactionDate().split('/')[1];
-            var day = this.transactionDate().split('/')[0];
-
-            var transactionDateToSave = new Date(year, month, day);
-
-            console.log(transactionDateToSave.toJSON());
-
-
-            jQuery.support.cors = true;
-            $.ajax({
-                url: apiBaseURL + "Transaction/Add",
-                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: transactionDateToSave.toISOString(), Type: 2 },
-                type: "POST",
-                success: function (result) {
-                }
-            });
-
-        },
         attached: function (view, parent) {
-            $(view).find('#transactionDate').datepicker({ dateFormat: 'dd/mm/yy' });
 
             var that = this;
 
             jQuery.support.cors = true;
             $.ajax({
-                url: apiBaseURL + "Category/Expense",
+                url: apiBaseURL + "Transaction/CurrentMonth",
                 type: "GET",
                 success: function (result) {
                     for (var i = 0; i < result.length; i++) {
-                        that.categories.push(result[i]);
+                        that.transactions.push(result[i]);
                     }
                 }
             });
-
-            //transactionDate = Date.now;
 
         },
         canDeactivate: function () {
