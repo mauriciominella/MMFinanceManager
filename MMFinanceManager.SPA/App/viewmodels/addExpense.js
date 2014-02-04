@@ -4,8 +4,8 @@
     //If you wish to be able to create multiple instances, instead export a function.
     //See the "welcome" module for an example of function export.
 
-    //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-    var apiBaseURL = 'http://localhost:26741/api/';
+    var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+    //var apiBaseURL = 'http://localhost:26741/api/';
         
 
     return {
@@ -25,20 +25,10 @@
             //app.showDialog(item);
         },
         add: function () {
-
-            var year = this.transactionDate().split('/')[2];
-            var month = this.transactionDate().split('/')[1];
-            var day = this.transactionDate().split('/')[0];
-
-            var transactionDateToSave = new Date(year, month, day);
-
-            console.log(transactionDateToSave.toJSON());
-
-
             jQuery.support.cors = true;
             $.ajax({
                 url: apiBaseURL + "Transaction/Add",
-                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: transactionDateToSave.toISOString(), Type: 2 },
+                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: this.transactionDate(), Type: 2 },
                 type: "POST",
                 success: function (result) {
                 }
@@ -46,7 +36,7 @@
 
         },
         attached: function (view, parent) {
-            $(view).find('#transactionDate').datepicker({ dateFormat: 'dd/mm/yy' });
+            //$(view).find('#transactionDate').datepicker({ dateFormat: 'dd/mm/yy' });
 
             var that = this;
 

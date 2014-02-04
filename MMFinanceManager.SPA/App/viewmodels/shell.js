@@ -7,6 +7,9 @@
             app.showMessage('Search not yet implemented...');
         },
         activate: function () {
+
+            moment.lang('pt-br');
+
             router.map([
                 { route: '', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' },
                 { route: 'currentMonthTransactions', moduleId: 'viewmodels/currentMonthTransactions', nav: true, displayName: 'Current Month Transactions' }

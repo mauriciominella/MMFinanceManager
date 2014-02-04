@@ -1,12 +1,3 @@
-﻿<!--<h3>Current Month Transactions</h3>
-
-<div class="bs-example">
-<ul class="list-group" data-bind="foreach: transactions">
-  <li class="list-group-item" data-bind="{html: Description + ' > ' + Date + ' > R$ ' + Amount}"></li>
-</ul>
-    </div>-->
-
-
-<ul data-bind="foreach: transactions">
-  <li data-bind="{html: Description + ' > ' + Date + ' > R$ ' + Amount}"></li>
+﻿<ul data-bind="foreach: transactions">
+  <li data-bind="{html: Description + ' > ' + moment(Date).format('L') + ' > R$ ' + Amount}"></li>
 </ul>

@@ -11,6 +11,7 @@ namespace MMFinanceManager.SPA {
 		new ScriptBundle("~/Scripts/vendor")
 			.Include("~/Scripts/jquery-{version}.js")
             .Include("~/Scripts/jquery-ui-{version}.js")
+            .Include("~/Scripts/moment-with-langs.min.js")
 			.Include("~/Scripts/bootstrap.js")
 			.Include("~/Scripts/knockout-{version}.js")
 		);
