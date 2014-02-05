@@ -4,8 +4,8 @@
     //If you wish to be able to create multiple instances, instead export a function.
     //See the "welcome" module for an example of function export.
 
-    var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-    //var apiBaseURL = 'http://localhost:26741/api/';
+    //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+    var apiBaseURL = 'http://localhost:26741/api/';
         
 
     return {
@@ -31,12 +31,12 @@
                 data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: this.transactionDate(), Type: 2 },
                 type: "POST",
                 success: function (result) {
+                    app.showMessage('Transaction Sucessfully Added!', 'Information', ['Ok']);
                 }
             });
 
         },
         attached: function (view, parent) {
-            //$(view).find('#transactionDate').datepicker({ dateFormat: 'dd/mm/yy' });
 
             var that = this;
 
@@ -51,10 +51,8 @@
                 }
             });
 
-            //transactionDate = Date.now;
-
         },
-        canDeactivate: function () {
+        canDeactivate: function () { 
             //the router's activator calls this function to see if it can leave the screen
             //return app.showMessage('Are you sure you want to leave this page?', 'Navigate', ['Yes', 'No']);
             return true;
