@@ -25,6 +25,9 @@
             //app.showDialog(item);
         },
         add: function () {
+
+            var that = this;
+
             jQuery.support.cors = true;
             $.ajax({
                 url: apiBaseURL + "Transaction/Add",
@@ -32,9 +35,16 @@
                 type: "POST",
                 success: function (result) {
                     app.showMessage('Transaction Sucessfully Added!', 'Information', ['Ok']);
+                    that.clearFormValues();
                 }
             });
 
+        },
+        clearFormValues: function(){
+            this.selectedCategory(null);
+            this.description(null);
+            this.amount(null);
+            this.transactionDate(null);
         },
         attached: function (view, parent) {
 

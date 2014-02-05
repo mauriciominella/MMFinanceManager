@@ -12,7 +12,7 @@
 
             router.map([
                 { route: '', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' },
-                { route: 'currentMonthTransactions', moduleId: 'viewmodels/currentMonthTransactions', nav: true, displayName: 'Current Month Transactions' }
+                { route: 'currentMonthTransactions', moduleId: 'viewmodels/currentMonthTransactions', nav: true, displayName: 'By Month' }
                 //{ route: 'addExpense', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' }
             ]).buildNavigationModel();
             
