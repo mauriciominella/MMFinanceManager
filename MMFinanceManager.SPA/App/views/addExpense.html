@@ -1,55 +1,35 @@
-﻿<form class="form-horizontal" data-bind="submit: add">
-<fieldset>
-
-<!-- Form Name -->
-<legend></legend>
+﻿<form data-bind="submit: add" style="padding: 10px 10px 10px 10px">
 
 <!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="category">Category</label>
-  <div class="controls">
-    <select id="category" name="category" class="input-xlarge" data-bind="options: categories,
+<div class="input-control select">
+    <select id="category" name="category" data-bind="options: categories,
     optionsText: function (item) {
         return item.Name
     },
     value: selectedCategory,
     optionsCaption: 'Choose...'">
     </select>
-  </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="description">Description</label>
-  <div class="controls">
-    <input id="description" name="description" type="text" placeholder="Expense description" class="input-xlarge"
+<div class="input-control text">
+    <input id="description" name="description" type="text" placeholder="Expense description"
      data-bind="value: description">
-  </div>
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="Amount">Amount</label>
-  <div class="controls">
-    <input id="Amount" name="Amount" type="text" placeholder="placeholder" class="input-xlarge" data-bind="value: amount">
-  </div>
+<div class="input-control text">
+    <input id="Amount" name="Amount" type="text" placeholder="Amount" data-bind="value: amount">
 </div>
 
 <!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="TransactionDate">Date</label>
-  <div class="controls">
-    <input id="transactionDate" name="TransactionDate" type="date" placeholder="placeholder" class="input-xlarge" data-bind="value: transactionDate">
-  </div>
+<div class="input-control text">
+    <input id="transactionDate" name="TransactionDate" type="date" data-bind="value: transactionDate">
 </div>
 
 
 <!-- Button -->
-<div class="control-group">
-  <div class="controls">
-    <button id="addExpenseButton" name="addExpenseButton" class="btn btn-primary">Add</button>
-  </div>
-</div>
 
-</fieldset>
+    <button id="addExpenseButton" name="addExpenseButton" class="btn-clear">Add</button>
+
 </form>

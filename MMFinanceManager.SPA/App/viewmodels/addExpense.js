@@ -4,8 +4,8 @@
     //If you wish to be able to create multiple instances, instead export a function.
     //See the "welcome" module for an example of function export.
 
-    //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-    var apiBaseURL = 'http://localhost:26741/api/';
+    var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+    //var apiBaseURL = 'http://localhost:26741/api/';
         
 
     return {
@@ -61,6 +61,14 @@
                 }
             });
 
+            var now = new Date();
+
+            var day = ("0" + now.getDate()).slice(-2);
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+            var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+            $('#transactionDate').val(today);
         },
         canDeactivate: function () { 
             //the router's activator calls this function to see if it can leave the screen

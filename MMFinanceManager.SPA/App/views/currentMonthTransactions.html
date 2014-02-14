@@ -1,3 +1,16 @@
-﻿<ul data-bind="foreach: transactions">
+﻿<!--<ul data-bind="foreach: transactions">
   <li data-bind="{html: Description + ' > ' + moment(Date).format('L') + ' > R$ ' + Amount}"></li>
-</ul>
+</ul>-->
+
+
+<div class="listview-outlook" data-bind="foreach: transactions">
+    <a href="#" class="list">
+        <div class="list-content">
+            <div class="item-title-secondary" data-bind="{html: Description}"></div>
+            <div class="tertiary-text" data-bind="{html: moment(Date).format('L')}"></div>
+            <div class="tertiary-text red" data-bind="{html: ' R$ ' + Amount}"></div>           
+        </div>
+    </a>
+
+     
+</div>
