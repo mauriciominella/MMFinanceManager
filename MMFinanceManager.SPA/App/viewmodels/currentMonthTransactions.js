@@ -22,20 +22,6 @@
         },
         attached: function (view, parent) {
 
-            //var that = this;
-
-            //jQuery.support.cors = true;
-            //$.ajax({
-            //    url: apiBaseURL + "Transaction/CurrentMonth",
-            //    type: "GET",
-            //    success: function (result) {
-            //        for (var i = 0; i < result.length; i++) {
-            //            that.transactions.push(result[i]);
-            //        }
-            //    }
-            //});
-
-
         },
         activate: function () {
             

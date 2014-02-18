@@ -45,6 +45,19 @@
             this.description(null);
             this.amount(null);
             this.transactionDate(null);
+            this.setCurrentDate();
+        },
+        setCurrentDate: function(){
+
+            var now = new Date();
+            var day = ("0" + now.getDate()).slice(-2);
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+            var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+            $('#transactionDate').val(today);
+            $("#transactionDate").trigger("change");
+
         },
         attached: function (view, parent) {
 
@@ -60,15 +73,8 @@
                     }
                 }
             });
-
-            var now = new Date();
-
-            var day = ("0" + now.getDate()).slice(-2);
-            var month = ("0" + (now.getMonth() + 1)).slice(-2);
-
-            var today = now.getFullYear() + "-" + (month) + "-" + (day);
-
-            $('#transactionDate').val(today);
+            
+            this.setCurrentDate();
         },
         canDeactivate: function () { 
             //the router's activator calls this function to see if it can leave the screen
