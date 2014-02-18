@@ -42,7 +42,15 @@ namespace MMFinanceManager.Services
 
         public void Delete(long transactionId)
         {
-            throw new NotImplementedException();
+            var query = this._dbContext.Transactions.Where(t => t.Id == transactionId);
+
+            if(query.Count() == 0)
+                throw new ArgumentException(String.Format("An error has occurred trying to delete the resource. The resource id {0} doesn't exist", transactionId));
+
+            Transaction transactionToDelete = query.First();
+
+            this._dbContext.Transactions.Remove(transactionToDelete);
+            this._dbContext.SaveChanges();
         }
 
         public IEnumerable<Transaction> GetAll()

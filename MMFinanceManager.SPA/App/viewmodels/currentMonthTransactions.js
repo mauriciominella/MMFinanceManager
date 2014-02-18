@@ -23,8 +23,31 @@
         attached: function (view, parent) {
 
         },
+        deleteTransaction: function (transactionId) {
+          
+            var that = this;
+
+            jQuery.support.cors = true;
+
+            data = JSON.stringify({ 'Id': transactionId });
+
+            $.ajax({
+                url: apiBaseURL + "Transaction/Remove/",
+                data: data,
+                type: "DELETE",
+                success: function (result) {
+                    alert('Removed');
+                    that.loadTransactions();
+                }
+            });
+
+        },
         activate: function () {
-            
+            var that = this;
+            that.loadTransactions();
+        },
+        loadTransactions: function(){
+
             var that = this;
 
             //Delete all content from transactions array
@@ -40,6 +63,7 @@
                     }
                 }
             });
+
         },
         canDeactivate: function () {
             //the router's activator calls this function to see if it can leave the screen
