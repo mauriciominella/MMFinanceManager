@@ -4,8 +4,8 @@
     //If you wish to be able to create multiple instances, instead export a function.
     //See the "welcome" module for an example of function export.
 
-    var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-    //var apiBaseURL = 'http://localhost:26741/api/';
+    //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+    var apiBaseURL = 'http://localhost:26741/api/';
         
 
     return {

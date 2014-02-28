@@ -133,6 +133,7 @@
     <Compile Include="App_Start\MetroUICSSBundleConfig.cs" />
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\DurandalController.cs" />
+    <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,6 +144,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App\main.js" />
+    <Content Include="App\services\categoryService.js" />
+    <Content Include="App\services\configurationService.js" />
+    <Content Include="App\specs\configurationServiceSpec.js" />
     <Content Include="App\viewmodels\addExpense.js" />
     <Content Include="App\viewmodels\currentMonthTransactions.js" />
     <Content Include="App\viewmodels\shell.js" />
@@ -165,6 +169,8 @@
     <Content Include="Content\images\icon.png" />
     <Content Include="Content\images\ios-startup-image-landscape.png" />
     <Content Include="Content\images\ios-startup-image-portrait.png" />
+    <Content Include="Content\jasmine\jasmine.css" />
+    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\metro-ui\css\metro-bootstrap-responsive.css" />
     <Content Include="Content\metro-ui\css\metro-bootstrap-responsive.min.css" />
     <Content Include="Content\metro-ui\css\metro-bootstrap.css" />
@@ -260,7 +266,14 @@
     <Content Include="Content\metro-ui\fonts\iconFont.eot" />
     <None Include="Properties\PublishProfiles\financemanagerspa - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\financemanagerspa - Web Deploy.pubxml" />
+    <Content Include="Scripts\jasmine\jasmine-html.js" />
+    <Content Include="Scripts\jasmine\jasmine.js" />
+    <Content Include="Scripts\jasmine\MIT.LICENSE" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jasmine-samples\Player.js" />
+    <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />
+    <Content Include="Scripts\jasmine-samples\Song.js" />
+    <Content Include="Scripts\jasmine-samples\SpecHelper.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.4.js" />
@@ -297,6 +310,7 @@
     <Content Include="Views\App\Index.cshtml" />
     <Content Include="Views\App\_splash.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Jasmine\SpecRunner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
