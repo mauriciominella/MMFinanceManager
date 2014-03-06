@@ -1,19 +1,14 @@
-﻿define("configurationService", function (require) {
+﻿define([], function () {
 
-    function ConfigurationService() {
-        //this.apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-        this.baseApiURL = 'http://localhost:26741/api/'
+    function ConfigurationService(devApi) {
+
+        if(devApi)
+            this.baseApiURL = 'http://localhost:26741/api/'
+        else
+            this.baseApiURL = 'http://mmfinancemanager.azurewebsites.net/api/';
+        
     }
 
-    //return {
-
-    //    //var apiBaseURL = 'http://mmfinancemanager.azurewebsites.net/api/';
-    //    //var apiBaseURL = 'http://localhost:26741/api/';
-
-    //    baseApiUrl: 'http://localhost:26741/api/'
-
-    //};
-
-    return ConfigurationService;
+    return ( ConfigurationService );
 
 });

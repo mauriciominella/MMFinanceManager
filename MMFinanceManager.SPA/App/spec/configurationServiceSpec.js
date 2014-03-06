@@ -1,9 +1,16 @@
-﻿define(["services/configurationService"], function (configService) {
+﻿define(["services/configurationService"], function (ConfigurationService) {
     describe('ConfigurationService', function(){
-        it('should get students roster list per class', function(){
+        it('should has the baseApiURL as localhost when devApi is true', function () {
+           
+            var configService = new ConfigurationService(true);
 
-            expect(1).toEqual(1);
-            //expect(configService.baseApiUrl).toEqual('http://localhost:26741/api/');
+            expect(configService.baseApiURL).toEqual('http://localhost:26741/api/');
+        });
+        it('should has the baseApiURL as azure api when devApi is false', function () {
+
+            var configService = new ConfigurationService(false);
+
+            expect(configService.baseApiURL).toEqual('http://mmfinancemanager.azurewebsites.net/api/');
             //expect(klass.getStudentRoster('foo')).toHaveHtml('<li>Joe</li><li>Richard</li>');
         });
     });
