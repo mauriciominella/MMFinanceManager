@@ -147,6 +147,7 @@
     <Content Include="App\main.js" />
     <Content Include="App\services\categoryService.js" />
     <Content Include="App\services\configurationService.js" />
+    <Content Include="App\spec\categoryServiceSpec.js" />
     <Content Include="App\spec\configurationServiceSpec.js" />
     <Content Include="App\spec\configurationServiceFactorySpec.js" />
     <Content Include="App\viewmodels\addExpense.js" />

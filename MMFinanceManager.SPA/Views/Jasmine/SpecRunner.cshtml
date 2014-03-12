@@ -30,10 +30,14 @@
 <body>
       <script type="text/javascript">
 
-          require(['spec/configurationServiceSpec', 'spec/configurationServiceFactorySpec'], function () {
+          require([
+              'spec/configurationServiceSpec',
+              'spec/configurationServiceFactorySpec',
+              'spec/categoryServiceSpec',
+            ],
+            function () {
               jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
               jasmine.getEnv().execute();
-
           });
   </script>
 </body>

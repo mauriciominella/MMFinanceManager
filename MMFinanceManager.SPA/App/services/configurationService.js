@@ -1,8 +1,8 @@
 ﻿define([], function () {
 
-    function ConfigurationService(devApi) {
+    function ConfigurationService(shouldUseDevApi) {
 
-        if(devApi)
+        if (shouldUseDevApi)
             this.baseApiURL = 'http://localhost:26741/api/'
         else
             this.baseApiURL = 'http://mmfinancemanager.azurewebsites.net/api/';
