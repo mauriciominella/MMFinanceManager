@@ -24,7 +24,8 @@
 
 </script>
 <script type="text/javascript" src="~/Scripts/require.js"></script>
-
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="~/Scripts/sinon-1.9.0.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,9 @@
             function () {
               jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
               jasmine.getEnv().execute();
-          });
+            });
+
+          define('jquery', function () { return jQuery; });
   </script>
 </body>
 </html>

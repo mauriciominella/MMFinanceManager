@@ -11,7 +11,6 @@
             var configService = new ConfigurationService(false);
 
             expect(configService.baseApiURL).toEqual('http://mmfinancemanager.azurewebsites.net/api/');
-            //expect(klass.getStudentRoster('foo')).toHaveHtml('<li>Joe</li><li>Richard</li>');
         });
     });
 });

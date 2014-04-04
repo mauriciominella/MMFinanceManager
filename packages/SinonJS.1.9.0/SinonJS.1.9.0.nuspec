@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>SinonJS</id>
+    <version>1.9.0</version>
+    <title>SinonJS</title>
+    <authors>cvrajeesh, Almenit</authors>
+    <owners>cvrajeesh, Almenit</owners>
+    <projectUrl>http://sinonjs.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Standalone test spies, stubs and mocks for JavaScript. No dependencies, works with any unit testing framework.
+
+Package version number is aligned with the SinonJS version numbering. Please send me a pull request to https://github.com/cvrajeesh/SinonJS-NuGet-Package if a new version of SinonJS is available</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <references />
+  </metadata>
+</package>
