@@ -26,27 +26,40 @@
         },
         add: function () {
 
-            //var year = this.transactionDate().split('/')[2];
-            //var month = this.transactionDate().split('/')[1];
-            //var day = this.transactionDate().split('/')[0];
-
-            //var transactionDateToSave = new Date(year, month, day);
-
-            console.log(this.transactionDate().toJSON());
-
+            var that = this;
 
             jQuery.support.cors = true;
             $.ajax({
                 url: apiBaseURL + "Transaction/Add",
-                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: new this.transactionDate()maiden.toJSON(), Type: 2 },
+                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: this.transactionDate(), Type: 2 },
                 type: "POST",
                 success: function (result) {
+                    app.showMessage('Transaction Sucessfully Added!', 'Information', ['Ok']);
+                    that.clearFormValues();
                 }
             });
 
         },
+        clearFormValues: function(){
+            this.selectedCategory(null);
+            this.description(null);
+            this.amount(null);
+            this.transactionDate(null);
+            this.setCurrentDate();
+        },
+        setCurrentDate: function(){
+
+            var now = new Date();
+            var day = ("0" + now.getDate()).slice(-2);
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+            var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+            $('#transactionDate').val(today);
+            $("#transactionDate").trigger("change");
+
+        },
         attached: function (view, parent) {
-            $(view).find('#transactionDate').datepicker({ dateFormat: 'dd/mm/yy' });
 
             var that = this;
 
@@ -61,8 +74,7 @@
                 }
             });
 
-            //transactionDate = Date.now;
-
+            this.setCurrentDate();
         },
         canDeactivate: function () {
             //the router's activator calls this function to see if it can leave the screen

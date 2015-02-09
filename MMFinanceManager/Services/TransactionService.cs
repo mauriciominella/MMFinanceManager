@@ -43,6 +43,11 @@ namespace MMFinanceManager.Services
             return _transactionDbService.GetAll().Where(t => t.Date.Month == DateTime.Now.Month && t.Date.Year == DateTime.Now.Year).OrderByDescending(o => o.Date);
         }
 
+        public void Remove(long id)
+        {
+            _transactionDbService.Delete(id);
+        }
+
         #endregion
  
     }

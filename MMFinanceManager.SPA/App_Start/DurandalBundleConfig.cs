@@ -11,18 +11,21 @@ namespace MMFinanceManager.SPA {
 		new ScriptBundle("~/Scripts/vendor")
 			.Include("~/Scripts/jquery-{version}.js")
             .Include("~/Scripts/jquery-ui-{version}.js")
-			.Include("~/Scripts/bootstrap.js")
+            .Include("~/Scripts/moment-with-langs.min.js")
+			//.Include("~/Scripts/bootstrap.js")
+            .Include("~/Scripts/metro-ui/metro.min.js")
 			.Include("~/Scripts/knockout-{version}.js")
 		);
 
       bundles.Add(
         new StyleBundle("~/Content/css")
           .Include("~/Content/ie10mobile.css")
-          .Include("~/Content/bootstrap.min.css")
-          .Include("~/Content/bootstrap-responsive.min.css")
-          .Include("~/Content/font-awesome.min.css")
+          //.Include("~/Content/bootstrap.min.css")
+          //.Include("~/Content/bootstrap-responsive.min.css")
+          .Include("~/Content/metro-ui/css/metro-bootstrap.css")
+          //.Include("~/Content/font-awesome.min.css")
 		  .Include("~/Content/durandal.css")
-          .Include("~/Content/starterkit.css")
+          //.Include("~/Content/starterkit.css")
         );
         
       bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(

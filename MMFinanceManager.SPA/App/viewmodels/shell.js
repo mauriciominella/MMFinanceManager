@@ -1,4 +1,5 @@
 ﻿define(['plugins/router', 'durandal/app'], function (router, app) {
+
     return {
         router: router,
         search: function() {
@@ -7,9 +8,12 @@
             app.showMessage('Search not yet implemented...');
         },
         activate: function () {
+
+            moment.lang('pt-br');
+
             router.map([
                 { route: '', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' },
-                { route: 'currentMonthTransactions', moduleId: 'viewmodels/currentMonthTransactions', nav: true, displayName: 'Current Month Transactions' }
+                { route: 'currentMonthTransactions', moduleId: 'viewmodels/currentMonthTransactions', nav: true, displayName: 'By Month' }
                 //{ route: 'addExpense', moduleId: 'viewmodels/addExpense', nav: true, displayName: 'Add Expense' }
             ]).buildNavigationModel();
             

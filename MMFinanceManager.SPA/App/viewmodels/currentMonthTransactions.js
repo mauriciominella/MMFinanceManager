@@ -22,7 +22,32 @@
         },
         attached: function (view, parent) {
 
+        },
+        deleteTransaction: function (transactionId) {
+          
             var that = this;
+
+            jQuery.support.cors = true;
+
+            $.ajax({
+                url: apiBaseURL + "Transaction/Remove/" + String(transactionId),
+                type: "DELETE",
+                success: function (result) {
+                    that.loadTransactions();
+                }
+            });
+
+        },
+        activate: function () {
+            var that = this;
+            that.loadTransactions();
+        },
+        loadTransactions: function(){
+
+            var that = this;
+
+            //Delete all content from transactions array
+            that.transactions().length = 0;
 
             jQuery.support.cors = true;
             $.ajax({

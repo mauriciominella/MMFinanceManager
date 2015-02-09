@@ -52,8 +52,11 @@ namespace MMFinanceManager.WebApi.Controllers
 
         // DELETE api/values/5
         [ActionName("Remove")]
+        [HttpDelete]
         public void Delete(long id)
         {
+            TransactionService transactionService = new TransactionService();
+            transactionService.Remove(id);
         }
     }
 }
