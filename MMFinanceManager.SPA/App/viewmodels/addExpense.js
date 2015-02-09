@@ -26,19 +26,19 @@
         },
         add: function () {
 
-            var year = this.transactionDate().split('/')[2];
-            var month = this.transactionDate().split('/')[1];
-            var day = this.transactionDate().split('/')[0];
+            //var year = this.transactionDate().split('/')[2];
+            //var month = this.transactionDate().split('/')[1];
+            //var day = this.transactionDate().split('/')[0];
 
-            var transactionDateToSave = new Date(year, month, day);
+            //var transactionDateToSave = new Date(year, month, day);
 
-            console.log(transactionDateToSave.toJSON());
+            console.log(this.transactionDate().toJSON());
 
 
             jQuery.support.cors = true;
             $.ajax({
                 url: apiBaseURL + "Transaction/Add",
-                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: transactionDateToSave.toISOString(), Type: 2 },
+                data: { CategoryId: this.selectedCategory().Id, Description: this.description, Amount: this.amount, Date: new this.transactionDate()maiden.toJSON(), Type: 2 },
                 type: "POST",
                 success: function (result) {
                 }

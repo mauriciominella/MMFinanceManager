@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="MMFinanceManager.WPF.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+xmlns:cal="http://www.caliburnproject.org"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
+	<GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" Height="235.96" Width="254.423">
+        <StackPanel VerticalAlignment="Center">
+            <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="10,10,10,10" TextWrapping="Wrap" Text="Email" Width="220"/>
+            <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="10,10,10,10" Width="220"/>
+            <Button x:Name="LoginButton" Width="220" Margin="10,10,10,10" Height="23" Content="Sign in">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <cal:ActionMessage MethodName="Login">
+                            <cal:Parameter Value="{Binding ElementName=PasswordBox}" />
+                        </cal:ActionMessage>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+        </StackPanel>
+	</GroupBox>
+ </UserControl>
