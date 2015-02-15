@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using MMFinanceManager.WPF.Process;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -21,6 +22,7 @@ namespace MMFinanceManager.WPF.ViewModel
         {
             Dictionary<Type, int> tabOrder = new Dictionary<Type, int>();
             tabOrder.Add(typeof(LoginViewModel), 1);
+            tabOrder.Add(typeof(CategoryViewModel), 2);
             //tabOrder.Add(typeof(BraviEntriesViewModel), 2);
             //tabOrder.Add(typeof(ConfigurationViewModel), 3);
 

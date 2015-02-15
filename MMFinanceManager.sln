@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMFinanceManager.SPA.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMFinanceManager.WPF", "MMFinanceManager.WPF\MMFinanceManager.WPF.csproj", "{AD64A872-9F8C-4725-BF97-04E9C5B6F9D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMFinanceManager.Repository.GDataDB", "MMFinanceManager.Repository.GDataDB\MMFinanceManager.Repository.GDataDB.csproj", "{BB20EE14-F8A3-4F58-B205-9168DFC34FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMFinanceManager.Repository.GDataDB.Tests", "MMFinanceManager.Repository.GDataDB.Tests\MMFinanceManager.Repository.GDataDB.Tests.csproj", "{0F60B120-D27B-45B3-9B8D-1C9FA65A5DEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{AD64A872-9F8C-4725-BF97-04E9C5B6F9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD64A872-9F8C-4725-BF97-04E9C5B6F9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD64A872-9F8C-4725-BF97-04E9C5B6F9D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB20EE14-F8A3-4F58-B205-9168DFC34FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB20EE14-F8A3-4F58-B205-9168DFC34FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB20EE14-F8A3-4F58-B205-9168DFC34FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB20EE14-F8A3-4F58-B205-9168DFC34FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F60B120-D27B-45B3-9B8D-1C9FA65A5DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F60B120-D27B-45B3-9B8D-1C9FA65A5DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F60B120-D27B-45B3-9B8D-1C9FA65A5DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F60B120-D27B-45B3-9B8D-1C9FA65A5DEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

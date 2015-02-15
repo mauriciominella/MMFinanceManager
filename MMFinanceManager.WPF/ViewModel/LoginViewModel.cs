@@ -1,10 +1,12 @@
 ﻿using Caliburn.Micro;
+using MMFinanceManager.WPF.Process;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace MMFinanceManager.WPF.ViewModel
 {
@@ -21,7 +23,7 @@ namespace MMFinanceManager.WPF.ViewModel
 
         public LoginViewModel()
         {
-
+            DisplayName = "Login";
         }
 
         #endregion
@@ -47,12 +49,13 @@ namespace MMFinanceManager.WPF.ViewModel
 
         public bool CanLogin()
         {
-            return !string.IsNullOrEmpty(Email);
+            return true;
         }
 
         public void Login(object passwordBox)
         {
-
+            PasswordBox obj = passwordBox as PasswordBox;
+            MyGDataDB.GetInstance(Email, obj.Password);
         }
 
         #endregion

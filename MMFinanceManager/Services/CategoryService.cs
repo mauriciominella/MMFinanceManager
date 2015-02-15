@@ -40,7 +40,7 @@ namespace MMFinanceManager.Services
 
         public IEnumerable<Category> GetAllOfExpenseType()
         {
-            return _categoryDbService.GetAll().Where(c => c.Type == TransactionType.Expense);
+            return _categoryDbService.GetAll().Where(c => c.Type == TransactionType.Expense.GetHashCode());
         }
 
 

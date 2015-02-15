@@ -16,13 +16,12 @@ using System.Windows.Shapes;
 namespace MMFinanceManager.WPF.View
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for CategoryView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class CategoryView : UserControl
     {
-        public LoginView()
+        public CategoryView()
         {
-
             InitializeComponent();
         }
     }
